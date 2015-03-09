@@ -2,12 +2,17 @@
 	@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 /*reset*/
+body {
+	margin: 0;
+}
 ul
  {
 	padding: 0;
 	margin: 0;
 	list-style: none;
-
+}
+a {
+	text-decoration: none;
 }
 .container {
 	width: 960px;
@@ -16,14 +21,14 @@ ul
 /*Navigation Menu*/
 		.menu {
 			/*list-style: none;*/
-			font-family: Arial;
+			/*font-family: Arial;*/
 		}
 		.menu li {
 			display: inline-block;
 		}
 		.menu li:before {
 			content: " | ";
-			padding: 11px;
+			padding: 6px;
 		}
 		.menu li:first-child:before  {
 			content: "";
@@ -34,7 +39,6 @@ ul
 			color:  #585951;
 			font-size: 14px;
 			font-weight: 400;
-			text-decoration: none;
 		}
 /*header*/
 	header {
@@ -45,18 +49,87 @@ ul
 		float: left;
 		padding-right: 48px;
 	}
-	.main-menu {
-		padding-top: 45px;
+	
+	.customer-options{
+		float: right;
+		text-align: right;
 	}
-	.lang-menu{
-		/*float: right;*/
+	header nav {
+		float: left;
 	}
+	.lang-menu {
+		padding-bottom: 28px;
+		line-height: 0;
+	}
+
+	/*main menu - droped down*/
+
+	.main-menu { 
+	  position: relative;
+	  top: 20px;
+	  padding-top: 25px;
+	/*display: inline-table;*/ 
+	 }
+	.main-menu:after {
+		content: ""; 
+		clear: both; 
+		display: block;
+	}
+	.main-menu ul {
+		display: none;  
+	}
+	.main-menu li:before {
+	  content: "";
+	  padding:0;
+	  
+	}
+	.main-menu li:hover > ul {
+		display: block;
+	}
+	/*.main-menu li {
+		float: left;
+	}*/
+	.main-menu > li:hover {
+  	    border: solid 1px black;
+	    border-bottom: none;
+	    background-color: #eee;
+	    box-shadow: -5px 5px 0 black;
+	}
+		
+	.main-menu li a {
+		display: block; 
+		padding: 5px 6px 30px;
+		color: #757575; 
+	}
+	.main-menu ul {
+		background: #eee; 
+		border-radius: 0px; 
+		padding: 0;
+		position: absolute; 
+		top: 100%; 
+		right:0; 
+		width:100%; 
+		box-shadow: -5px 5px 0 #757575;
+	}
+	.main-menu ul li {
+		float: none; 
+		position: relative;
+	}
+	.main-menu ul li a {
+		padding: 15px 40px;
+		color: #fff;
+	}	
+	.main-menu ul li a:hover {
+		background: #4b545f;
+	}
+
+
 /*login/lang/search- menu*/
 		
 			
 		#lang {
 			border: 0;
-			/*width: 48px;*/
+			width: 46px;
 		}
 
 		.search {
@@ -66,12 +139,11 @@ ul
 			
 		}
 		.search input {
-			width: 145px;
+			width: 115px;
 			border-radius: 6px;
 			border-width: 0;
 		}
 		.search button {
-			text-decoration: none;
 			border: 0;
 			border-left: solid 1px #d2d2d2;
 			background: inherit;
@@ -186,7 +258,6 @@ ul
 			color: white;
 			font-size: 14px;
 			font-weight: 700;
-			text-decoration: none;
 			padding: 6px 0 6px 37px;
 			background: url(../images/icons/Link2.png) 0 50% no-repeat;
 	
@@ -226,10 +297,7 @@ ul
 			font-family: 'Open Sans', sans-serif;
 			font-size: 16px;
 			color: white;
-			text-decoration: none;
-			padding-top: 97px;
-
-			
+			padding-top: 97px;			
 		}
 		.data {
 			background: url(../images/icons/data.png) 50% 0 no-repeat;
@@ -325,8 +393,7 @@ ul
 		.news-events a {
 			font-size: 13px;
 			font-weight: 400;
-			color: white;
-			text-decoration: none;						
+			color: white;					
 		}
 		.news .news-events a {
 			padding: 6px 0 6px 37px;
@@ -346,24 +413,33 @@ ul
 		.success-stories h2 {
 			color:  #565656;
 		}
-		.success-icons {
-			/*list-style: none;				*/
+		.success-icons {			
 			height: 450px;			
-			padding: 50px 0 30px;
+			padding: 50px 5px 30px;
 		}
-		.success-icons li {
+
+		.success-icons .wide-li {
+			width: 356px;
+			float: left;
+		}
+		.success-icons .small-icon {
+			margin: 4px;
+		}
+		.success-icons .big-icon {
+			margin: 4px;
+		}
+		.success-icons .narrow-li {
+			width: 237px;
+			float: right;
+		}
+		.success-icons ul li {
 			display: inline-block;
 			border-radius: 2px;
 			background-color:  #ffffff;
 			/*width: 110px;*/
 			/*height: 97px;*/
 		}
-		
-		.success-icons a {
-			text-decoration: none;
-		}
 		.success-icons p {
-			text-decoration: none;
 			font-family: 'Open Sans', sans-serif;   		
 			color:  #565656;
 			font-size: 18px; 
@@ -374,7 +450,6 @@ ul
 			text-indent: 40px;
 		}
 		 
-		/*.success-icons li:first-child p,*/
 		.success-icons p[data-type="small"]
 		 {
 			text-indent: 0;
@@ -384,14 +459,14 @@ ul
 			line-height: 23px;
 		}
 
-		
+		.success-icons .narrow-li figure {
+			width: 201px;
+		}
 		.success-icons figure {
-			
-			/*width: 330px;*/
+			text-align: left;
 			height: 180px;
 			margin: 0;
 			padding: 20px 11px 8px 17px;
-			box-shadow: 3px 4px 5px black;
 		}
 		.success-icons figure > img {
 			padding-right: 10px;
@@ -449,7 +524,6 @@ ul
 		}
 
 		.footer-links a {
-			text-decoration: none;
 			font-family: Arial;
 			color:  #eeeeee;
 			font-size: 12px;
@@ -504,7 +578,6 @@ ul
 			padding-right: 9px;
 		}
 		.social-links a {
-			text-decoration: none;
 			color: #eeeeee;
 		}
 
