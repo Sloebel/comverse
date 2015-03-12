@@ -267,7 +267,34 @@ p {
 	}
 	.atcomverse p{
 		margin-top: 10px;
-	}		
+	}
+
+	/*******************
+	  slideshow-bullets
+	********************/
+
+		.slideshow-bullets {
+			padding-top: 30px;
+		
+		}	
+		.slideshow-bullets li {
+			float: left;
+			margin: 5px;
+			
+		}	
+		.slideshow-bullets li a {
+			background: lightgrey;
+			width: 5px;
+			height: 5px;
+			padding: 3px;
+			border-radius: 2px;
+		}
+		.slideshow-bullets li:first-child {
+			margin-left: 0;
+		}
+
+	/***********************/
+
 	.colored-textbox {			
 		padding-top: 88px;
 	}
