@@ -568,12 +568,12 @@ p {
 	.sitemap {
 		float: left;
 	}
-	.sitemap div {
+	.sitemap > ul > li {
 		float: left;
 		padding-left: 70px;
 		padding-bottom: 55px;
 	}
-	.sitemap div:first-child {
+	.sitemap ul li:first-child {
 		padding-left: 0;
 	}
 	
@@ -639,14 +639,14 @@ p {
 		color: #eeeeee;
 	}
 
-	aside form input {
+	.footer-social form input {
 		width: 160px;
 		height: 28px;
 		border: 0;
 		padding: 0;
 		
 	}
-	footer form button {
+	.footer-social form button {
 		border: 0;
 		border-radius: 2px;
 		box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.28);
@@ -656,6 +656,11 @@ p {
 		color:  #ffffff;
 		font-size: 12px;
 		font-weight: 400;
+		cursor: pointer;
+	}
+	.footer-social form button:hover,
+	.footer-social form button:focus {
+		background: #40A4CD;
 	}
 
 	footer .menu,
