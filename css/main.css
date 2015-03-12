@@ -465,6 +465,7 @@ p {
 	.success-icons {			
 		height: 350px;			
 		padding: 50px 5px 30px;
+		overflow: auto;
 	}
 
 	.success-icons .wide-li {
@@ -472,7 +473,13 @@ p {
 		float: left;
 	}
 	.success-icons .small-icon {
+		width: 108px;
+		height: 95px;
 		margin: 4px;
+		background: url(../images/icons/play-bg-w108px-h95px.jpg);
+	}
+	.success-icons .small-icon a:hover img {
+		opacity: 0;
 	}
 	.success-icons .big-icon {
 		margin: 4px;
