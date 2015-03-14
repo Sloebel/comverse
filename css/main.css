@@ -3,6 +3,18 @@
 
 /*reset*/
 /*overflow: auto ??*/
+
+
+html {
+	font-size: 100%;
+	/*box-sizing: border-box;*/
+}
+/**,
+*:before,
+*:after {
+	box-sizing: border-box;
+}*/
+
 body { 
 	margin: 0;
 }
@@ -19,6 +31,18 @@ a {
 	width: 960px;
 	margin: 0 auto;
 }
+/********************************
+	clearfix for float elements
+*********************************/
+.clearfix:before,
+.clearfix:after {
+    content: " "; 
+    display: table; 
+}
+
+.clearfix:after {
+    clear: both;
+}
 
 /************************
 		headers
@@ -29,24 +53,24 @@ h2, h3, h4 {
 }
 h2 {
 	 font-family: 'Open Sans', sans-serif;
-	 font-size: 42px;
+	 font-size: 2.625em;
 	 font-weight: 300;
 }
 h3 {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 40px;
+	font-size: 2.5em;
 	font-weight: 300;
 }
 h4 {
 	font-family: Arial;
 	/*color:  #eeeeee;*/
-	font-size: 14px;
+	font-size: 0.875em;
 	font-weight: 400;
 }
 .blue-h4 {
 	font-family: 'Open Sans', sans-serif;
 	color:  #4ea7d3;
-	font-size: 18px;
+	font-size: 1.125em;
 	font-weight: 700;
 	padding: 20px 0;
 	margin: 0;
@@ -56,7 +80,7 @@ h4 {
 ***********************/
 p {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 18px; 
+	font-size: 1.125em; 
 	font-weight: 400;
 	line-height: 26px;
 	color: white;
@@ -67,6 +91,7 @@ p {
 *************************/
 .menu {
 	/*font-family: Arial;*/
+	font-size: 0.875em;
 }
 .menu li {
 	/*display: inline-block;*/
@@ -83,7 +108,7 @@ p {
 .menu a {
 	font-family: Arial;
 	color:  #585951;
-	font-size: 14px;
+	
 	font-weight: 400;
 }
 
@@ -91,7 +116,7 @@ p {
 		Button design
 ******************************/
 .btn {
-	font-size: 14px;
+	font-size: 0.875em;
 	font-family: 'Open Sans', sans-serif;
 	color: white;
 	text-decoration: none;
@@ -145,11 +170,11 @@ p {
 		  top: 18px;
 		  padding-top: 25px;
 		}
-		.main-menu:after {
+		/*.main-menu:after {
 			content: ""; 
 			clear: both; 
 			display: block;
-		}
+		}*/
 		.main-menu div {
 			display: none;  
 		}
@@ -158,7 +183,8 @@ p {
 		  padding:0;
 		  
 		}
-		.main-menu li:hover > div {
+		.main-menu li:hover > div
+		/*.main-menu > li > a:hover + div*/ {
 			display: block;
 		}
 		.main-menu > li {
@@ -169,13 +195,17 @@ p {
 	  	    border: solid 1px #D5D5D5;
 		    border-bottom: none;
 		    background-color: #fff;
-		    box-shadow:  -4px 0px 4px 0px rgba(0, 0, 0, 0.09);;
+		    box-shadow:  -4px 0px 4px 0px rgba(0, 0, 0, 0.09);
 		}		
 		.main-menu > li > a {
 			display: block; 
 			padding: 5px 6px 27px;
 			color: #757575; 
+		}	
+		.main-menu a:hover {
+			color: #3399CC;
 		}
+		
 		.main-menu ul {
 			width: 285px;
 			float: left; 
@@ -187,7 +217,7 @@ p {
 			position: relative;
 		}
 		.main-menu ul li a {
-			font-size: 11px;
+			font-size: 0.6875em;
 			color: #757575;
 			letter-spacing: -0.3px;
 		}
@@ -195,7 +225,7 @@ p {
 			margin-top: 15px;
 		}	
 		.main-menu .li-blue-header a {
-			font-size: 13px;
+			font-size: 0.8125em;
 		    font-weight: 600;
 		    color: #3399CC;
 		}
@@ -214,9 +244,7 @@ p {
 			padding-left: 45px;
 			background: url(../images/line-divider.png) 0 50% no-repeat;
 		}
-		.main-menu a:hover {
-			color: #3399CC;
-		}
+		
 
 
 	/*****************************
@@ -283,7 +311,7 @@ p {
 			
 		}	
 		.slideshow-bullets li a {
-			background: lightgrey;
+			background: #eee;
 			width: 5px;
 			height: 5px;
 			padding: 3px;
@@ -299,7 +327,7 @@ p {
 		padding-top: 88px;
 	}
 	.colored-textbox li {
-		display: inline-block;
+		float: left;
 		height: 141px;
 		width: 254px;
 		padding: 18px 13px 15px ;
@@ -315,7 +343,7 @@ p {
 	.colored-textbox p {
 		font-family: 'Open Sans', sans-serif;
 		color: white;
-		font-size: 20px;
+		font-size: 1.25em;
 		font-weight: 300;
 		line-height: 30px;
 		margin: 0;
@@ -324,7 +352,7 @@ p {
 	.colored-textbox a {
 		font-family: arial, sans-serif;
 		color: white;
-		font-size: 14px;
+		font-size: 0.875em;
 		font-weight: 700;
 		padding: 6px 0 6px 37px;
 		background: url(../images/icons/Link2.png) 0 50% no-repeat;
@@ -366,7 +394,7 @@ p {
 	}
 	.solutions-list a {
 		font-family: 'Open Sans', sans-serif;
-		font-size: 16px;
+		font-size: 1em;
 		color: white;
 		padding-top: 97px;			
 	}
@@ -396,29 +424,31 @@ p {
 /**************************
 		events
 ***************************/
-
 	.comverse-at-news-media {
 		background: url(../images/bg/eventsBG.jpg) 50% 0 no-repeat;
+		box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.34);
 		padding-top: 55px;
-		padding-bottom: 78px;
-		text-align: center;	
+		padding-bottom: 76px;
+		text-align: center;
+		position: relative;
+		z-index: 60;	
 	}
 	.news,
 	.event {
-		display: inline-block;
+		float: left;
 		text-align: left;
 		padding-top: 45px;
 	}
 	.news {
-		padding-right: 30px;
+		padding-right: 26px;
 	}
 	.news-events {
 		font-family: 'Open Sans', sans-serif;
 		margin: 0;
 	}
 	.news-events li {
-		display: inline-block;
-		margin-left: 30px;
+		float: left;
+		margin-left: 26px;
 	}
 	.news-events li:first-child {
 		margin-left: 0;
@@ -434,7 +464,7 @@ p {
 		text-align: center;
 		color: white;
 		font-family: arial, sans-serif;
-		font-size: 18px;
+		font-size: 1.125em;
 		font-weight: 400;
 		line-height: 1.5;
 		margin: 25px 12px 10px 11px;
@@ -445,8 +475,8 @@ p {
 		border-bottom-style: dotted;
 		border-width: 1px;
 		font-family: 'Open Sans', sans-serif;
-		font-size: 46px;
-		padding-right: 10px;
+		font-size: 2.5556em;
+		padding-right: 8px;
 		padding-left: 8px;
 	}	
 	.news-events p {
@@ -457,7 +487,7 @@ p {
 		box-shadow: 0px 1px 4px 0px #a2a2a2;
 		font-family: Arial;
 		color:  #1a1a1a;
-		font-size: 14px;
+		font-size: 0.875em;
 		font-weight: 400;
 		line-height: 20px;
 		padding-top: 12px;
@@ -465,7 +495,7 @@ p {
 	}
 	
 	.news-events a {
-		font-size: 13px;
+		font-size: 0.8125em;
 		font-weight: 400;
 		color: white;					
 	}
@@ -525,7 +555,7 @@ p {
 	.success-icons p {
 		font-family: 'Open Sans', sans-serif;   		
 		color:  #565656;
-		font-size: 18px; 
+		font-size: 1.125em; 
 		font-weight: 300;
 		line-height: 1.7;	
 		margin: 0;
@@ -537,7 +567,7 @@ p {
 	 {
 		text-indent: 0;
 		background: none;
-		font-size: 14px; 
+		font-size: 0.875em; 
 		font-weight: 300;
 		line-height: 23px;
 	}
@@ -564,19 +594,18 @@ p {
 	.success-icons figcaption {
 		border-top:solid #dddddd 1px;
 		padding-top: 13px;
+		font-size: 0.875em;
 	}
 	.success-icons cite {
 		display: block;
 		font-family: 'Open Sans', sans-serif;
-		color:  #3aa6db;
-		font-size: 14px;
+		color:  #3aa6db;		
 		font-weight: 300;
 		font-style: normal;
 	}
 	.success-icons span {
 		font-family: Arial;
-		color:  #565656;
-		font-size: 14px;
+		color:  #565656;		
 		font-weight: 400;
 	}
 	.success-icons figcaption img {
@@ -611,9 +640,9 @@ p {
 	.footer-links a {
 		font-family: Arial;
 		color:  #eeeeee;
-		font-size: 12px;
+		font-size: 0.75em;
 		font-weight: 400;
-		line-height: 22px
+		line-height: 22px;
 	}
 
 	.footer-social {
@@ -635,7 +664,7 @@ p {
 	.footer-social dt {
 	
 		width: 50px;
-		font-size: 24px;
+		font-size: 1.5em;
 		font-weight: 300;
 		padding-right: 19px;
 		text-align: center;
@@ -645,7 +674,7 @@ p {
 	
 	}
 	.footer-social dt span {
-		font-size: 47px;
+		font-size: 1.95em;
 		font-weight: 700;
 
 	}
@@ -690,10 +719,11 @@ p {
 		background: #40A4CD;
 	}
 
+	footer .menu a {
+		font-size: 0.86em;
+	}
 	footer .menu,
-	footer .menu a
-	 {
-		font-size: 12px;
+	footer .menu a {
+
 		color:  #969696;
 	}
-	
