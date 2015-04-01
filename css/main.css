@@ -171,16 +171,14 @@ p {
 	}
 	
 	.customer-options{
+		width: 180px;
 		float: right;
 		text-align: right;
 	}
 	header nav {
 		float: left;
 	}
-	.lang-menu {
-		padding-bottom: 47px;
-	}
-
+	
 	/*****************************
 		main menu - droped down
 	******************************/
@@ -271,7 +269,16 @@ p {
 		login/lang/search- menu
 	******************************/
 		
-			
+		.lang-menu {
+			min-width: 397px;
+		    position: relative;
+		    left: -190px;
+			padding-bottom: 47px;
+		}	
+		.lang-menu li a:hover {
+			color: #3399CC;
+			text-decoration: underline;
+		}	
 		#lang {
 			border: 0;
 			width: 46px;
@@ -733,7 +740,7 @@ p {
 	/***** hover animation ****/
 	.big-icon figure,
 	.small-icon img{
-		transition: 0.5s;
+		transition: translateY 0.5s;
 	}
 	.big-icon:hover figure,
 	.small-icon:hover .hover-up {
@@ -859,4 +866,68 @@ p {
 	}
 	footer .menu a:hover {
 		text-decoration: underline;
+	}
+
+	@media screen and (max-width: 1000px) {
+		/*---header------------*/
+		.logo {
+			padding-right: 30px;
+			padding-top: 25px;
+		}
+		.logo img {
+			width: 95px;
+		}
+		.main-menu > li > a {
+			font-size: 0.9em;
+		}
+		.search input {
+			width: 78px;
+		}
+		.customer-options {
+  			width: 110px;
+  		}
+  		.lang-menu {
+  			left: -258px;
+  		}
+  		.main-menu div {
+  	   		right: -187px;
+  			left: -150px;
+  		}
+  		/*---main--------------*/
+  		.colored-textbox li {
+			width: 243px;
+			font-size: 0.9em;
+			padding: 18px 15px 15px 15px;
+			margin-left: 5px;
+		}
+		/*---footer section----*/
+		.container {
+			width: 740px;
+		}
+		.desktop-visible {
+			display: none;
+		}
+		.footer-section {
+			height: 50px;
+		}
+		.footer-section {
+			padding-top: 18px;
+		}
+		.footer-social,
+		.social-links {
+			padding: 0;
+			margin: 0;
+		}
+		.footer-social {
+			background: 0;
+		}
+		.social-links {
+			float: right;
+		}
+		.social-links li {
+			padding: 0 0 0 20px;
+		}
+		.social-links li:first-child {
+			padding: 0;
+		}
 	}
