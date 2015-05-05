@@ -63,17 +63,18 @@ main {
 /************************
 		headers
 *************************/
-h2, h3, h4 {
+h1,h2, h3, h4 {
 	color: white;
 	margin: 0;
 }
+h1, h2, h3 {
+	font-family: 'Open Sans', sans-serif;
+}
 h2 {
-	 font-family: 'Open Sans', sans-serif;
 	 font-size: 2.625em;
 	 font-weight: 300;
 }
 h3 {
-	font-family: 'Open Sans', sans-serif;
 	font-size: 2.5em;
 	font-weight: 300;
 }
@@ -118,8 +119,9 @@ p {
 	padding: 6px;
 }
 .menu li:first-child:before  {
-	content: "";
-	padding: 0;
+	/*content: "";
+	padding: 0;*/
+	display: none;
 }
 .menu a {
 	font-family: Arial;
@@ -204,9 +206,9 @@ p {
 		    display: block;
 		}
 		.main-menu { 
-		  position: relative;
-		  top: 18px;
-		  padding-top: 25px;
+			position: relative;
+			top: 18px;
+			padding-top: 25px;
 		}
 		/*.main-menu:after {
 			content: ""; 
@@ -217,30 +219,35 @@ p {
 			display: none;  
 		}
 		.main-menu li:before {
-		  content: "";
-		  padding:0;
+		  	content: "";
+		  	padding:0;
 		  
 		}
-		.main-menu li:hover > div
+		.main-menu li:hover > div,
+		.main-menu li > a:focus + div
 		/*.main-menu > li > a:hover + div*/ {
 			display: block;
 		}
 		.main-menu > li {
-			border: solid 1px transparent;
-			border-bottom: none;		
+			/*border: solid 1px transparent;*/
+			/*border-bottom: none;*/		
 		}
-		.main-menu > li:hover {
+		.main-menu > li:hover > a,
+		.main-menu > li > a:focus {
 	  	    border: solid 1px #D5D5D5;
 		    border-bottom: none;
 		    background-color: #fff;
 		    box-shadow:  -4px 0px 4px 0px rgba(0, 0, 0, 0.09);
 		}		
 		.main-menu > li > a {
+			border: solid 1px transparent;
+			border-bottom: none;
 			display: block; 
 			padding: 5px 6px 27px;
 			color: #757575; 
 		}	
-		.main-menu a:hover {
+		.main-menu a:hover,
+		.main-menu a:focus {
 			color: #3399CC;
 		}
 		
@@ -295,7 +302,8 @@ p {
 		    left: -190px;
 			padding-bottom: 47px;
 		}	
-		.lang-menu li a:hover {
+		.lang-menu li a:hover,
+		.lang-menu li a:focus {
 			color: #3399CC;
 			text-decoration: underline;
 		}	
